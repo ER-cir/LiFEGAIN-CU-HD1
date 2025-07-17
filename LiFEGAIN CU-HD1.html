@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ระบบตรวจเช็คเครื่อง EKG Nihon Kohden</title>
+    <title>ระบบตรวจเช็คเครื่อง LiFEGAIN CU-HD1</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -84,11 +84,11 @@
             <div class="container mx-auto px-4">
                 <div class="flex items-center justify-between">
                     <div class="flex items-center">
-                        <img src="https://static.wixstatic.com/media/e91413_88be7814a24b4c0387b8c426c66d545b~mv2.jpg/v1/fill/w_375,h_356,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/tec8300_2_new%20(1).jpg" alt="Nihon Kohden" class="h-8 mr-3 rounded-md">
-                        <h1 class="text-lg font-medium text-gray-800">ระบบตรวจเช็คเครื่อง Nihon Kohden</h1>
+                        <img src="https://cu911.com/upload/product/20220119_095649_336.jpg" alt="LiFEGAIN CU-HD1" class="h-8 mr-3 rounded-md">
+                        <h1 class="text-lg font-medium text-gray-800">ระบบตรวจเช็คเครื่อง LiFEGAIN CU-HD1</h1>
                     </div>
                     <div class="text-xs text-gray-500 text-right">
-                        <p>ID: 100000322014</p>
+                        <p>ID: 6530-004-1111/13</p>
                     </div>
                 </div>
             </div>
@@ -112,13 +112,13 @@
             <div class="bg-white rounded-lg shadow-sm p-4 mb-4">
                 <div class="flex flex-col md:flex-row items-center">
                     <div class="md:w-1/4 mb-4 md:mb-0 flex justify-center">
-                        <img src="https://static.wixstatic.com/media/e91413_88be7814a24b4c0387b8c426c66d545b~mv2.jpg/v1/fill/w_375,h_356,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/tec8300_2_new%20(1).jpg" alt="Nihon Kohden" class="equipment-image shadow" onerror="this.onerror=null;this.src='https://placehold.co/128x128/cccccc/FFFFFF?text=No+Image';">
+                        <img src="https://cu911.com/upload/product/20220119_095649_336.jpg" alt="LiFEGAIN CU-HD1" class="equipment-image shadow" onerror="this.onerror=null;this.src='https://placehold.co/128x128/cccccc/FFFFFF?text=No+Image';">
                     </div>
                     <div class="md:w-3/4 md:pl-6">
-                        <h2 class="text-xl font-semibold text-gray-800 mb-2">Nihon Kohden</h2>
+                        <h2 class="text-xl font-semibold text-gray-800 mb-2">LiFEGAIN CU-HD1</h2>
                         <div class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
                             <p><span class="text-gray-500">วันที่เริ่มใช้:</span> <span id="start-date"></span></p>
-                            <p><span class="text-gray-500">ราคา:</span> 644,500 บาท</p>
+                            <p><span class="text-gray-500">ราคา:</span> 450,000 บาท</p>
                             <p><span class="text-gray-500">สถานะล่าสุด:</span> <span id="current-status" class="font-medium text-gray-600">รอข้อมูล...</span></p>
                             <p><span class="text-gray-500">ตรวจล่าสุด:</span> <span id="last-check" class="font-medium">-</span></p>
                         </div>
@@ -171,7 +171,8 @@
                         <thead class="bg-gray-50 text-xs text-gray-500 uppercase tracking-wider">
                             <tr>
                                 <th class="py-2 px-3 text-left">วันที่</th><th class="py-2 px-3 text-left">เวร</th>
-                                <th class="py-2 px-3 text-left">ผู้ตรวจ</th><th class="py-2 px-3 text-center">สถานะ</th>
+                                <th class="py-2 px-3 text-left">ผู้ตรวจ</th>
+                                <th class="py-2 px-3 text-center">สถานะ</th>
                                 <th class="py-2 px-3 text-center">รายละเอียด</th>
                             </tr>
                         </thead>
@@ -179,7 +180,7 @@
                     </table>
                 </div>
             </div>
-
+            
             <div id="content-notification" class="bg-white rounded-lg shadow-sm p-4" style="display: none;">
                 <h2 class="text-lg font-medium text-gray-800 mb-4">การแจ้งเตือน</h2>
                 <div id="notification-list" class="space-y-3"></div>
@@ -202,7 +203,7 @@
 
         <footer class="bg-white border-t border-gray-200 py-3 mt-4">
             <div class="container mx-auto px-4 text-center text-sm text-gray-500">
-                <p>© 2025 ระบบตรวจเช็คเครื่อง EKG</p>
+                <p>© 2025 ระบบตรวจเช็คเครื่องมือแพทย์</p>
             </div>
         </footer>
     </div>
@@ -260,7 +261,7 @@
         const hideLoading = () => loadingIndicator.style.display = 'none';
         const formatDate = (dateStr) => new Date(dateStr).toLocaleDateString('th-TH', { year: 'numeric', month: '2-digit', day: '2-digit' });
         const formatMonthYear = (date) => date.toLocaleDateString('th-TH', { year: 'numeric', month: 'long' });
-
+        
         function fileToBase64(file) {
             return new Promise((resolve, reject) => {
                 const reader = new FileReader();
@@ -284,18 +285,27 @@
 
         // --- UI FUNCTIONS ---
         function switchTab(tabName) {
-            Object.values(tabs).forEach(t => t.classList.remove('tab-active', 'text-gray-500', 'hover:text-gray-700'));
-            Object.values(contents).forEach(c => c.style.display = 'none');
+            Object.values(tabs).forEach(t => {
+                if(t) t.classList.remove('tab-active', 'text-gray-500', 'hover:text-gray-700');
+            });
+            Object.values(contents).forEach(c => {
+                if(c) c.style.display = 'none';
+            });
             
             Object.entries(tabs).forEach(([key, tabElement]) => {
-                if (key === tabName) {
-                    tabElement.classList.add('tab-active');
-                } else {
-                    tabElement.classList.add('text-gray-500', 'hover:text-gray-700');
+                if (tabElement) {
+                    if (key === tabName) {
+                        tabElement.classList.add('tab-active');
+                    } else {
+                        tabElement.classList.add('text-gray-500', 'hover:text-gray-700');
+                    }
                 }
             });
 
-            contents[tabName].style.display = 'block';
+            if (contents[tabName]) {
+                contents[tabName].style.display = 'block';
+            }
+
             if (tabName === 'history' || tabName === 'dashboard' || tabName === 'notification') {
                 loadHistoryData();
             }
@@ -449,7 +459,6 @@
                 checkData = data;
                 displayHistory(checkData);
                 updateDashboard();
-                updateNotifications();
                 updateLatestStatus();
             } catch (error) {
                 console.error("Error fetching data from Google Sheet:", error);
@@ -488,14 +497,12 @@
             });
             checkRecord.status = hasIssue ? 'มีปัญหา' : 'พร้อมใช้';
 
-            // Handle images
             const imagePromises = Object.entries(imageFiles).map(async ([itemId, file]) => {
                 const base64String = await fileToBase64(file);
                 checkRecord.images[itemId] = base64String;
             });
             await Promise.all(imagePromises);
             
-            // Add individual notes
             Object.assign(checkRecord.notes, notes);
 
             try {
@@ -510,7 +517,7 @@
                 await sendTelegramNotification(checkRecord);
                 showMessage('สำเร็จ', 'บันทึกข้อมูลและส่งแจ้งเตือนเรียบร้อยแล้ว');
                 resetForm();
-                loadHistoryData(); // Refresh data after saving
+                loadHistoryData();
 
             } catch (error) {
                 console.error("Error saving check:", error);
@@ -571,9 +578,13 @@
 
                     html += `<div class="flex justify-between items-start border-b py-1.5">
                         <div>${item.label}</div>
-                        <div class="text-right">
-                            <span class="px-2 py-0.5 rounded-full text-xs font-medium ${statusClass}">${statusText}</span>
-                            ${note?.text ? `<p class="text-xs text-gray-600 mt-1">หมายเหตุ: ${note.text}</p>` : ''}
+                        <div class="text-right">`;
+                    if(item.type === 'number') {
+                        html += `<span>${value}°C</span>`;
+                    } else {
+                        html += `<span class="px-2 py-0.5 rounded-full text-xs font-medium ${statusClass}">${statusText}</span>`;
+                    }
+                    html += `${note?.text ? `<p class="text-xs text-gray-600 mt-1">หมายเหตุ: ${note.text}</p>` : ''}
                             ${imageUrl ? `<a href="${imageUrl}" target="_blank"><img src="${imageUrl}" alt="รูปภาพ" class="mt-1 max-h-24 ml-auto rounded"></a>` : ''}
                         </div>
                     </div>`;
@@ -603,42 +614,20 @@
         }
 
         function updateDashboard() {
-            if (!checkData || checkData.length === 0) return;
+            if (contents.dashboard.style.display !== 'block' || !checkData || checkData.length === 0) {
+                return;
+            }
+            const recentData = checkData.slice(0, 15).reverse();
+            
+            const labels = recentData.map(d => formatDate(d.date));
+            const fridgeData = recentData.map(d => d.refrigeratorTemp);
+            const warmerData = recentData.map(d => d.warmerTemp);
 
-            const total = checkData.length;
-            const ready = checkData.filter(c => c.status === 'พร้อมใช้').length;
-            const issue = total - ready;
-
-            document.getElementById('total-checks').textContent = total;
-            document.getElementById('ready-status').textContent = ready;
-            document.getElementById('issue-status').textContent = issue;
-
-            const batteryStartDate = new Date(EKG_START_DATE);
-            const months = (new Date().getFullYear() - batteryStartDate.getFullYear()) * 12 + (new Date().getMonth() - batteryStartDate.getMonth());
-            document.getElementById('battery-age').textContent = months;
-
-            const issueCounts = {};
-            checkData.forEach(check => {
-                Object.entries(check.items).forEach(([key, value]) => {
-                    if (value === 'ชำรุด' || value === 'ไม่พร้อมใช้') {
-                        issueCounts[key] = (issueCounts[key] || 0) + 1;
-                    }
-                });
-            });
-            const issueLabels = Object.keys(issueCounts).map(key => checklistItems.find(i => i.id === key)?.label || key);
-            const issueData = Object.values(issueCounts);
-            renderChart('common-issues-chart', 'bar', issueLabels, issueData, 'ปัญหาที่พบบ่อย');
-
-            const shiftCounts = { 'เช้า': 0, 'บ่าย': 0, 'ดึก': 0 };
-            checkData.forEach(check => {
-                if (shiftCounts.hasOwnProperty(check.shift)) {
-                    shiftCounts[check.shift]++;
-                }
-            });
-            renderChart('shift-chart', 'pie', Object.keys(shiftCounts), Object.values(shiftCounts), 'การตรวจเช็คตามเวร');
+            renderChart('fridge-temp-chart', 'line', labels, fridgeData, 'ตู้เย็น', '#3b82f6');
+            renderChart('warmer-temp-chart', 'line', labels, warmerData, 'Warmer', '#ef4444');
         }
 
-        function renderChart(canvasId, type, labels, data, title) {
+        function renderChart(canvasId, type, labels, data, title, color) {
             const ctx = document.getElementById(canvasId).getContext('2d');
             if (charts[canvasId]) charts[canvasId].destroy();
             
@@ -662,8 +651,8 @@
 
             charts[canvasId] = new Chart(ctx, {
                 type: type,
-                data: { labels: labels, datasets: [{ label: title, data: data, backgroundColor: type === 'pie' ? ['#3b82f6', '#10b981', '#f97316'] : '#3b82f6' }] },
-                options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: type === 'pie' } } }
+                data: { labels: labels, datasets: [{ label: title, data: data, borderColor: color, backgroundColor: color, fill: false, tension: 0.1 }] },
+                options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: true } } }
             });
         }
 
@@ -672,15 +661,11 @@
             document.getElementById('check-date').valueAsDate = new Date();
             notes = {};
             imageFiles = {};
-            document.querySelectorAll('.add-note').forEach(button => {
-                button.classList.remove('has-note');
-                button.innerHTML = '<i class="fas fa-comment"></i> หมายเหตุ';
-            });
         }
 
         function setupEventListeners() {
             Object.entries(tabs).forEach(([key, tabElement]) => {
-                tabElement.addEventListener('click', () => switchTab(key));
+                if (tabElement) tabElement.addEventListener('click', () => switchTab(key));
             });
 
             document.getElementById('check-form').addEventListener('submit', saveCheck);
