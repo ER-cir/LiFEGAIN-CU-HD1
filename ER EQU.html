@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เช็คเครื่องมือแพทย์ ER รพ.เจาะไอร้อง</title>
+    
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Prompt -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ใช้ฟอนต์ Prompt */
+        body {
+            font-family: 'Prompt', sans-serif;
+            position: relative; /* Needed for pseudo-elements */
+            overflow-x: hidden; /* Hide horizontal overflow from decorative elements */
+        }
+        /* Custom pastel colors */
+        .bg-pastel-blue { background-color: #f0f9ff; } /* Lighter blue */
+        .text-navy { color: #0c4a6e; }
+
+        /* Card hover effect */
+        .card-hover {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 20px -5px rgba(14, 116, 144, 0.2);
+        }
+
+        /* Decorative background elements */
+        body::before, body::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            z-index: -1;
+            filter: blur(80px); /* Soft blur effect */
+            opacity: 0.6;
+        }
+        /* Top-left decorative circle */
+        body::before {
+            width: 300px;
+            height: 300px;
+            background-color: #a7f3d0; /* Pastel green */
+            top: -100px;
+            left: -150px;
+        }
+        /* Bottom-right decorative circle */
+        body::after {
+            width: 400px;
+            height: 400px;
+            background-color: #bae6fd; /* Pastel sky blue */
+            bottom: -150px;
+            right: -200px;
+        }
+    </style>
+</head>
+<body class="bg-pastel-blue min-h-screen">
+
+    <div class="container mx-auto p-4 sm:p-6 md:p-8 relative z-10">
+        
+        <!-- ส่วนหัว: โลโก้และชื่อเรื่อง -->
+        <header class="text-center mb-8">
+            <img src="https://i.postimg.cc/vHcRLT5g/image.png" alt="โลโก้โรงพยาบาลเจาะไอร้อง" class="mx-auto h-24 w-auto mb-4"
+                 onerror="this.onerror=null; this.src='https://placehold.co/100x100/f0f9ff/0c4a6e?text=Logo';">
+            <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-navy">
+                เช็คเครื่องมือการแพทย์
+            </h1>
+            <p class="text-lg text-sky-800">ห้องฉุกเฉิน โรงพยาบาลเจาะไอร้อง</p>
+        </header>
+
+        <!-- ส่วนเนื้อหา: รายการเครื่องมือ -->
+        <main>
+            <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6">
+                
+                <!-- Card 1: EKG-Mediblue -->
+                <a href="https://er-cir.github.io/EKGMediblue/EKG%20Mediblue" target="_blank" class="card-hover">
+                    <div class="bg-white/70 backdrop-blur-sm rounded-xl shadow-md overflow-hidden h-full flex flex-col border border-gray-200/50">
+                        <div class="aspect-w-1 aspect-h-1 w-full">
+                           <img class="object-cover w-full h-full" src="https://www.mediblumed.com/wp-content/uploads/2024/05/ME12P-1024x1024.jpg" alt="รูปภาพเครื่อง EKG-Mediblue"
+                                onerror="this.onerror=null; this.src='https://placehold.co/400x400/ffffff/9ca3af?text=EKG-Mediblue';">
+                        </div>
+                        <div class="p-4 text-center flex-grow">
+                            <p class="font-semibold text-gray-800">เครื่อง EKG-Mediblue</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Card 2: EKG EDAN -->
+                <a href="https://er-cir.github.io/EKGEDAN/EKGEDAN" target="_blank" class="card-hover">
+                    <div class="bg-white/70 backdrop-blur-sm rounded-xl shadow-md overflow-hidden h-full flex flex-col border border-gray-200/50">
+                         <div class="aspect-w-1 aspect-h-1 w-full">
+                           <img class="object-cover w-full h-full" src="https://www.medicalintertec.com/wp-content/uploads/2023/03/edan-se1200express-jpg-1.jpg" alt="รูปภาพเครื่อง EKG EDAN"
+                                onerror="this.onerror=null; this.src='https://placehold.co/400x400/ffffff/9ca3af?text=EKG+EDAN';">
+                        </div>
+                        <div class="p-4 text-center flex-grow">
+                            <p class="font-semibold text-gray-800">เครื่อง EKG EDAN</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Card 3: Defibration Nihon-Kohden -->
+                <a href="https://er-cir.github.io/Nihon-Kohden/Nihon%20Kohden" target="_blank" class="card-hover">
+                    <div class="bg-white/70 backdrop-blur-sm rounded-xl shadow-md overflow-hidden h-full flex flex-col border border-gray-200/50">
+                         <div class="aspect-w-1 aspect-h-1 w-full">
+                           <img class="object-cover w-full h-full" src="https://static.wixstatic.com/media/e91413_88be7814a24b4c0387b8c426c66d545b~mv2.jpg/v1/fill/w_375,h_356,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/tec8300_2_new%20(1).jpg" alt="รูปภาพเครื่อง Defibration Nihon-Kohden"
+                                onerror="this.onerror=null; this.src='https://placehold.co/400x400/ffffff/9ca3af?text=Nihon-Kohden';">
+                        </div>
+                        <div class="p-4 text-center flex-grow">
+                            <p class="font-semibold text-gray-800">เครื่อง Defib Nihon-Kohden</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Card 4: Defibration LiFEGAIN-CU-HD1 -->
+                <a href="https://er-cir.github.io/LiFEGAIN-CU-HD1/LiFEGAIN%20CU-HD1.html" target="_blank" class="card-hover">
+                    <div class="bg-white/70 backdrop-blur-sm rounded-xl shadow-md overflow-hidden h-full flex flex-col border border-gray-200/50">
+                        <div class="aspect-w-1 aspect-h-1 w-full">
+                           <img class="object-cover w-full h-full" src="https://cu911.com/upload/product/20220119_095649_336.jpg" alt="รูปภาพเครื่อง Defibration LiFEGAIN-CU-HD1"
+                                onerror="this.onerror=null; this.src='https://placehold.co/400x400/ffffff/9ca3af?text=LiFEGAIN';">
+                        </div>
+                        <div class="p-4 text-center flex-grow">
+                            <p class="font-semibold text-gray-800">เครื่อง Defib LiFEGAIN</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Card 5: ตู้เย็นยา/Warmer -->
+                <a href="https://er-cir.github.io/warmer/Warmer.html" target="_blank" class="card-hover">
+                    <div class="bg-white/70 backdrop-blur-sm rounded-xl shadow-md overflow-hidden h-full flex flex-col border border-gray-200/50">
+                         <div class="aspect-w-1 aspect-h-1 w-full">
+                           <img class="object-cover w-full h-full" src="https://medicool.co.th/wp-content/uploads/2022/09/%E0%B8%95%E0%B8%B9%E0%B9%89%E0%B9%81%E0%B8%8A%E0%B9%88%E0%B8%A7%E0%B8%B1%E0%B8%84%E0%B8%8B%E0%B8%B5%E0%B8%99%E0%B8%82%E0%B8%99%E0%B8%B2%E0%B8%94%E0%B9%80%E0%B8%A5%E0%B9%87%E0%B8%81.png" alt="รูปภาพตู้เย็นยา/Warmer"
+                                onerror="this.onerror=null; this.src='https://placehold.co/400x400/ffffff/9ca3af?text=Warmer';">
+                        </div>
+                        <div class="p-4 text-center flex-grow">
+                            <p class="font-semibold text-gray-800">ตู้เย็นยา / Warmer</p>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </main>
+        
+        <!-- ส่วนท้าย: เครดิต -->
+        <footer class="text-center mt-12">
+            <p class="text-sm text-sky-700">พัฒนาโดย. งานผู้ป่วยอุบัติเหตุฉุกเฉินและนิติเวช โรงพยาบาลเจาะไอร้อง</p>
+        </footer>
+
+    </div>
+    
+    <!-- Script for aspect ratio fallback for browsers that don't support aspect-ratio CSS -->
+    <script>
+        if (!('aspectRatio' in document.documentElement.style)) {
+            const elements = document.querySelectorAll('.aspect-w-1.aspect-h-1');
+            elements.forEach(el => {
+                el.style.position = 'relative';
+                el.style.paddingBottom = '100%';
+                const img = el.querySelector('img');
+                if (img) {
+                    img.style.position = 'absolute';
+                    img.style.top = '0';
+                    img.style.left = '0';
+                    img.style.width = '100%';
+                    img.style.height = '100%';
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>
